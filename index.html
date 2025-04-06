@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="main.js" defer></script>
   <link rel="stylesheet" href="style.css" />
   <title>Calculadora de gorjeta</title>
 </head>
@@ -17,19 +18,20 @@
         <strong>Bill</strong>
         <div class="input-box">
           <img src="./calculadora-de-gorjeta_base/images/icon-dollar.svg" alt="icon dollar" />
-          <input type="number" id="bill" placeholder="0" />
+          <input oninput="receiveBillVallue()" type="number" id="bill" placeholder="0" />
         </div>
       </div>
 
       <div class="tip">
         <strong>Select Tip %</strong>
+
         <div>
-          <button>5%</button>
+          <button class="button-selected">5%</button>
           <button>10%</button>
           <button>15%</button>
           <button>25%</button>
           <button>50%</button>
-          <input type="number" id="custom" placeholder="Custom"/>
+          <input type="number" id="custom-tip" placeholder="Custom"/>
         </div>
       </div>
 
@@ -37,7 +39,7 @@
         <strong>Number of People</strong>
         <div class="input-box">
           <img src="./calculadora-de-gorjeta_base/images/icon-person.svg" alt="person icon" />
-          <input type="number" id="people" placeholder="0" />
+          <input oninput="receiveNumberOfPeopleValue()" type="number" id="people" placeholder="0" />
         </div>
       </div>
     </section>
